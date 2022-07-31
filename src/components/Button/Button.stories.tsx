@@ -1,23 +1,13 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import Button from "./Button";
+import { Story } from "@storybook/react";
+import { Button, IButton } from "./Button";
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "ReactComponentLibrary/Button",
-  component: Button,
-} as ComponentMeta<typeof Button>;
-
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
-
-export const HelloWorld = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-HelloWorld.args = {
-  label: "Hello world!",
+  title: 'Components/Button',
+  component: Button
 };
 
-export const ClickMe = Template.bind({});
-ClickMe.args = {
-  label: "Click me!",
-};
+const Template: Story<IButton> = (args) => <Button {...args}>Button</Button>;
+
+export const Default = Template.bind({});
+Default.args = { variant: 'primary', size: 'medium' };
