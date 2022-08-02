@@ -1,7 +1,9 @@
-const white = '#fff';
-const black = '#000';
+import { Theme } from '@emotion/react'
 
-const palette = {
+const white = '#fff'
+const black = '#000'
+
+const palette: Theme['palette'] = {
   common: {
     black,
     white,
@@ -15,15 +17,17 @@ const palette = {
     main: '#BDBDBD',
     light: '#F2F2F2',
     hover: '#CCCCCC',
-    contrastText: '#222222'
+    contrastText: '#222222',
   },
   error: {
     main: '#b62b28',
     light: '#fad7d6',
     contrastText: white,
   },
-  link: {
-    link: '#0000FF'
+  text: {
+    main: '#222222',
+    disabled: '#a8a8a8',
+    link: '#0000FF',
   },
   grey: {
     50: '#F7F7F7',
@@ -35,7 +39,7 @@ const palette = {
     600: '#6d6d6d',
     700: '#5F5F5F',
     800: '#4A4A4A',
-    900: '#3D3D3D'
+    900: '#3D3D3D',
   },
   blue: {
     50: '#eaeef8',
@@ -47,7 +51,7 @@ const palette = {
     600: '#264696',
     700: '#1d3470',
     800: '#13234b',
-    900: '#0a1125'
+    900: '#0a1125',
   },
   red: {
     50: '#fcebeb ',
@@ -59,7 +63,7 @@ const palette = {
     600: '#b62b28',
     700: '#89201e',
     800: '#5b1614',
-    900: '#2e0b0a'
+    900: '#2e0b0a',
   },
   green: {
     50: '#F0F5E7',
@@ -71,7 +75,7 @@ const palette = {
     600: '#567B08',
     700: '#415C06',
     800: '#2B3E04',
-    900: '#161F02'
+    900: '#161F02',
   },
   orange: {
     50: '#fef1ea',
@@ -83,7 +87,7 @@ const palette = {
     600: '#c75e22',
     700: '#95461a',
     800: '#642f11',
-    900: '#321709'
+    900: '#321709',
   },
   yellow: {
     50: '#fffee6',
@@ -95,16 +99,16 @@ const palette = {
     600: '#ccc501',
     700: '#999401',
     800: '#666200',
-    900: '#333100'
+    900: '#333100',
   },
-};
+}
 
 const typography = {
   fontFamily:
     "'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif",
-};
+}
 
 export const theme = {
   palette,
   typography,
-};
+}
